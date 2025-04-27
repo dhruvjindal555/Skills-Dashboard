@@ -15,7 +15,7 @@ const topics: TopicProgress[] = [
 
 const SyllabusWiseAnalysis = () => {
   return (
-    <div className="p-6 rounded-lg border border-gray-200 bg-white w-full max-w-md">
+    <div className="p-6 rounded-lg border border-gray-200 bg-white w-full ">
 
       <h2 className="text-lg font-semibold text-gray-800 mb-6">Syllabus Wise Analysis</h2>
 

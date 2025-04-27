@@ -22,7 +22,7 @@ interface ComparisonGraphProps {
 
 const ComparisonGraph = ({ percentile }: ComparisonGraphProps) => {
   return (
-    <div className=" p-6 rounded-lg border border-gray-200 bg-white w-full max-w-2xl">
+    <div className=" p-6 rounded-lg border border-gray-200 bg-white w-full">
 
       <h2 className="text-lg font-semibold text-gray-800 ">Comparison Graph</h2>
 

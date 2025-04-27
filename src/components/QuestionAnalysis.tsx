@@ -20,7 +20,7 @@ const QuestionAnalysis = ({ score }: QuestionAnalysisProps) => {
 
 
   return (
-    <div className="p-6 rounded-lg border border-gray-200 bg-white w-full max-w-sm">
+    <div className="p-6 rounded-lg border border-gray-200 bg-white w-full ">
 
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-gray-800">Question Analysis</h2>

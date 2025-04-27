@@ -34,14 +34,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="w-full flex ">
-        <nav className="flex flex-col space-y-2 py-10 h-screen w-1/6 font-semibold text-gray-700">
+      <div className="w-full flex flex-col md:flex-row">
+        <div className="flex flex-row md:flex-col justify-between md:justify-start space-y-2 pt-5 md:py-10 w-full md:h-screen md:w-1/6 font-semibold text-gray-700">
           {navItems.map((item) => {
             const isActive = item.id === activeId;
             const baseClasses =
-              "flex px-6 py-4 space-x-4 items-center cursor-pointer transition";
+              "flex items-center m-0 px-2 md:px-6 md:py-4 space-x-2 md:space-x-4 items-center cursor-pointer transition";
             const activeClasses = isActive
-              ? "rounded-r-full bg-gray-100 text-blue-600"
+              ? "md:rounded-r-full rounded-full bg-gray-100 text-blue-600"
               : "hover:rounded-r-full hover:bg-gray-100 hover:text-blue-600";
 
             return (
@@ -55,12 +55,12 @@ export default function Home() {
               </div>
             );
           })}
-        </nav>
-        <div className="border-l-1 px-10 border-gray-200 justify-center items-center ">
+        </div>
+        <div className="border-l-1 px-4 sm:px-10 border-gray-200 justify-center items-center ">
           <div className="my-5">
             <span>Skill test</span>
           </div>
-          <div className="flex space-x-8">
+          <div className="flex space-x-8 flex-col sm:flex-row ">
             <TestSummaryCard
               rank={rank}
               score={score}
@@ -70,7 +70,7 @@ export default function Home() {
                 setIsModalOpen(true)
               }
               } />
-            <div className="justify-center space-y-4 items-center ">
+            <div className="justify-center space-y-4 items-center w-full ">
               <SyllabusWiseAnalysis />
               <QuestionAnalysis score={score} />
             </div>
