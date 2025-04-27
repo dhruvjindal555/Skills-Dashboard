@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className="w-full flex flex-col md:flex-row">
-        <div className="flex flex-row md:flex-col justify-between md:justify-start space-y-2 pt-5 md:py-10 w-full md:h-screen md:w-1/6 font-semibold text-gray-700">
+        <div className="flex flex-row md:flex-col justify-evenly md:justify-start space-y-2 pt-5 md:py-10 w-full md:h-screen md:w-1/6 font-semibold text-gray-700">
           {navItems.map((item) => {
             const isActive = item.id === activeId;
             const baseClasses =
