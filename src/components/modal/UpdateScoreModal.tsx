@@ -32,7 +32,7 @@ const UpdateScoresModal = ({ rank, percentile, score, setRank, setScore, setPerc
     const { register,
         handleSubmit,
         formState: { errors },
-    } = useForm<Input, any, Output>({
+    } = useForm<Input, unknown, Output>({
         resolver: zodResolver(UpdateScoresSchema),
         mode: 'onChange',
         defaultValues: {
