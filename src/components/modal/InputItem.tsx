@@ -12,7 +12,7 @@ interface InputItemProps {
 
 const InputItem = ({ inputFor, normalLabel, boldLabel, register, errors }: InputItemProps) => {
     return (
-        <div className='flex justify-between'>
+        <div className='flex flex-col sm:flex-row justify-between'>
             <label className="flex items-center gap-2 text-gray-700 text-sm  mb-1">
                 <span className="w-6 h-6 bg-blue-900 text-white flex items-center justify-center rounded-full text-xs">1</span>
                 <p>{normalLabel}<span className="font-bold">{boldLabel}</span></p>
@@ -23,7 +23,7 @@ const InputItem = ({ inputFor, normalLabel, boldLabel, register, errors }: Input
                     onWheel={(e) =>  e.currentTarget.blur()}
                     {...register(inputFor)}
                     placeholder={String(inputFor).slice(0, 1).toUpperCase() + String(inputFor).slice(1,).toLowerCase()}
-                    className=" p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <p className='absolute text-red-500 text-xs'> {errors[inputFor]?.message as string}</p>
             </div>
