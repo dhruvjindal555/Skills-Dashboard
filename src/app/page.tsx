@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
 
 
 export default function Home() {
-  const [activeId, setActiveId] = useState<string>("skill-test");
+  const [activeId] = useState<string>("skill-test");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [rank, setRank] = useState(1)
   const [percentile, setPercentile] = useState(30)
